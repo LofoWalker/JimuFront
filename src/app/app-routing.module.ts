@@ -1,10 +1,18 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-const routes: Routes = [];
+import {UploadFilesComponent} from './components/upload-files/upload-files.component';
+import {PageNotFoundComponentComponent} from './components/page-not-found-component/page-not-found-component.component';
+
+const routes: Routes = [
+  { path: '', component: UploadFilesComponent },
+  { path: 'uploadFiles', component: UploadFilesComponent },
+  { path: '**', component: PageNotFoundComponentComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations: []
 })
 export class AppRoutingModule { }
