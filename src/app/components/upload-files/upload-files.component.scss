@@ -1,0 +1,75 @@
+#uploadButton {
+  background-color: #c38c45;
+  float: right;
+  margin-right: 5%;
+}
+
+#upload-window {
+  border: solid 1px #DEB887;
+  width: auto;
+  height: auto;
+  float: right;
+  margin-right: 5%;
+}
+
+#file {
+  border: solid 1px #DEB887;
+  box-shadow: 2px 2px 2px #deb887;
+  width: 80%;
+  height: auto;
+  padding: 2%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+mat-progress-bar .mat-progress-bar-buffer {
+  background: #E4E8EB;
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: #c38c45;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background: #E4E8EB;
+}
+
+::ng-deep .mat-progress-bar {
+  border-radius: 2px;
+}
+
+.brownButton {
+  background-color: #c38c45;
+}
+
+.formButton {
+  margin: 10%;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #c38c45;
+}
+
+#file-upload {
+  display: none;
+}
+
+.mat-card {
+  background: #DEB887;
+}
+
+.mat-raised-button {
+  background-color: #4e3f31;
+}
+
+#cancel_upload {
+  margin-left: 25%;
+}
+
+#upload_title {
+  color:#4e3f31;
+}
