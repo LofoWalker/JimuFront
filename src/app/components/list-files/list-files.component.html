@@ -1,0 +1,36 @@
+<div id="list_file">
+  <div>
+    <div class="row">
+      <div class="col-sm-12 col-xl-6">
+        <h1 id="list_file_title">Vos documents</h1>
+        <button mat-raised-button class="brownButton" (click)="selectAll()">Selectionner tous</button>
+        <button mat-raised-button class="brownButton" (click)="deleteFiles()">Supprimer la selection</button>
+        <ag-grid-angular
+          #lines
+          style="width: 50rem; height: 80rem;"
+          class="ag-theme-material"
+          [rowData]="rowData"
+          [columnDefs]="columnDefs"
+          [gridOptions]="gridOptions"
+          rowSelection="multiple"
+          (selectionChanged)="onSelectionChanged($event)"
+          [frameworkComponents]="agGridComponents"
+          (gridReady)="initAgGrid()">
+        </ag-grid-angular>
+      </div>
+      <div class="col-sm-12 col-xl-6 mt-5">
+        <img *ngIf="url != '' && isOther"
+             id="blah"
+             [src]="url"
+             alt="your image"/>
+
+        <pdf-viewer
+          *ngIf="url != '' && isPdf"
+          [src]="url"
+          [original-size]="true"
+        ></pdf-viewer>
+      </div>
+    </div>
+  </div>
+</div>
+
