@@ -39,10 +39,10 @@ export class UploadFilesComponent implements OnInit {
     this.uploadedFiles = [];
 
     Array.from(this.selectedFiles).forEach(file => {
-      const fileDetails = new FileDetails();
+      const fileDetails = new FileDetails(file.name, 0, file.size, new Date().toDateString());
       fileDetails.name = file.name;
       this.uploadedFiles.push(fileDetails);
-      this.fileService.uploadSingleFile(file)
+      this.fileService.uploadFile(file)
         .pipe(tap(event => {
           if (event.type === HttpEventType.UploadProgress) {
             // @ts-ignore
